@@ -1,0 +1,7 @@
+name: "Factory Template"
+version: "1.0"
+for: "3.3" 
+by: "Fredrik Lidstr\xf6m"
+url: "https://soniccharge.com"
+thumbnail: "Template"
+folder: "TemplateResources"
