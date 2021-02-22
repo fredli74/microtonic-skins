@@ -85,7 +85,6 @@ for: "3.3"
 by: "Fredrik Lidstr\xf6m"
 url: "https://soniccharge.com"
 thumbnail: "Template"
-folder: "TemplateResources"
 ```
 Thumbnail should be a PNG image in full GUI resolution (1440x1100)
 
