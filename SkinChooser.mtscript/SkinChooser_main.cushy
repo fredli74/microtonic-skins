@@ -1,0 +1,205 @@
+@define script=skinChooser
+
+// alignment rules for the currently supported ui scales:
+// `width` should be divisible by 4 and `height` +/- 2 should be divisible by 4
+@begin window(left, top, width, height, windowTitle, backgroundColor, frameColor, contents)
+	@define shadowBlur=8
+	@define shadowX=4
+	@define shadowY=2
+	@define shadowIntensity=0.33
+	@define titleBarHeight=24
+
+	bounds: { @left-@shadowX, @top-@shadowY, @width+@shadowBlur, @height+@shadowBlur }
+
+	views: {
+		// Drop shadow and background (using masks to multiply four gradient fades in each direction)
+		{
+			type: "vector"
+			source: "context [ g=call [ mask [ wipe gradient:[linear $0 from:0.0 to:1.0] ] ]; $g 0,0,@shadowBlur,0; $g 0,0,0,@shadowBlur; $g {@width+@shadowBlur},0,@width,0; $g 0,{@height+@shadowBlur},0,@height; wipe rgb(0,0,0,@shadowIntensity) ]; fill @backgroundColor; rect @shadowX,@shadowY,@width,@height"
+		}
+		// Click has to be before dragArea
+		{
+			type: "click"
+			bounds: { @shadowX, @shadowY, w-@shadowBlur, h-@shadowBlur }
+			action: "nop"
+			hint: "" // empty hint removes hints by underlying views from popuping up
+			cursor: "arrow"
+		}
+		// dragArea can't be in a group, or we'll just drag within that group.
+		{
+			type: "dragArea"
+			bounds: { @shadowX, @shadowY, w-@shadowBlur, @titleBarHeight }
+			hint: "Drag window"
+			bringToFront: "auto"
+			positionVariable: @script.windowPosition
+			zOrderVariable: @script.windowZOrder
+		}
+		{
+			type: "group"
+			bounds: { @shadowX, @shadowY, w-@shadowBlur, h-@shadowBlur }
+			views: {
+				// Window contents
+				{
+					type: "group"
+					bounds: { 2, @titleBarHeight, w-4, h-@titleBarHeight-2 }
+					views: {
+						@contents
+					}
+				}
+
+				// Window title and frame
+				{
+					type: "group"
+					bounds: { 0, 0, w, @titleBarHeight }
+					views: {
+						{
+							type: "rectangle"
+							fill: "@frameColor"
+						}
+
+						{
+							type: "caption"
+							font: { ivgfont: "sans-serif", size: 16, color: "white" }
+							text: @windowTitle
+							align: "middle center"
+						}
+
+						{
+							bounds: { r - 20, t + 4, 16, 16 }
+							type: "button"
+							action: "closeCushy"
+							standard: { image: { ivgCode: "bounds 0,0,16,16; pen white; path svg:M3,3L13,13M13,3L3,13" } }
+							down: { image: { ivgCode: "bounds 0,0,16,16; pen white; path svg:M4,4L12,12M12,4L4,12" } }
+							hint: "Close window"
+							cursor: "arrow"
+						}
+					}
+				}
+				{
+					type: "rectangle"
+					frame: { color: "@frameColor", stroke: 2, joints: "miter" }
+				}
+			}
+		}
+	}
+@end
+
+// ===================================
+// === SCRIPT SPECIFIC BEGINS HERE ===
+// ===================================
+
+@define uiHue=0.60
+@define uiSat=0.08
+@define backgroundColor=hsv(@uiHue,@uiSat,0.8)
+@define frameColor=hsv(@uiHue,@uiSat,0.4)
+@define fillColor=hsv(@uiHue,@uiSat,0.8)
+@define downColor=hsv(@uiHue,@uiSat,0.5)
+@define selectedColor=hsv(@uiHue,0.66,0.6)
+@define captionFont={ ivgfont: "sans-serif", size: 13, color: "hsv(@uiHue,@uiSat,0.2)" }
+
+transitions: {
+	open: {
+		time: 0.1
+		scale: 90
+		opacity: 0
+	}
+	close: {
+		time: 0.1
+		scale: 90
+		opacity: 0
+	}
+}
+
+autoexecs: {
+	{
+		action: "set"
+		params: { @script.windowZOrder, 0 }
+		onReload: false
+	}
+}
+
+@begin skinChooser(x, y, name, version, by, url, thumbnail, folder, incompatible)
+	{
+		type: "group"
+		bounds: { @x, @y, 156, 158 }
+		views: {
+			{
+				type: "button"
+				bounds: { 0, 0, $, 118 }
+				action: "batch"
+				params: {
+				@if (@incompatible == yes)
+					{ "nop", { enabled: false } }
+				@else
+					{ "set", { "skinResourcesPath", "@folder" } }
+					{ "reload", { }, { ignoreChecked: true } }
+				@endif
+				}
+			@if (@incompatible != yes)
+				cursor: hand
+			@endif
+				hint: @if (@incompatible == yes) "This skin is incompatible with your version of Microtonic" @else "Version @version" @endif
+				standard: { image: { name: "@thumbnail", scale: 10, offset: { 4, 4 } } }
+				checked: { frame: { color: "@selectedColor", stroke: 3 } }
+			}
+		@if (@incompatible == yes)
+			{
+				type: "vector"
+				source: "pen red width:4 opacity:0.5; path svg:M8,8L148,110M8,110L148,8"
+			}
+		@endif
+			{
+				type: "caption"
+				bounds: { 4, 118, $-8, 20 }
+				font: @captionFont
+				align: "left"
+				text: "@name"
+			}
+			{
+				type: "caption"
+				bounds: { 4, 136, $-8, 20 }
+				font: @captionFont
+				align: "left"
+				text: "by @by"
+			}
+		@if (@url != @<@>)
+			{
+				type: "button"
+				bounds: { w-4-18, 127, 18, 18 }
+				action: "launch"
+				params: "@url"
+				cursor: hand
+				caption: "i"
+				rounded: 100
+				standard: { frame: { color:"hsv(@uiHue,0.70,0.55)", stroke: 1 }, font: { ivgfont: "serif", size: 14, gamma:3.5, color:"hsv(@uiHue,0.70,0.55)" } }
+				down: { frame: { color:"hsv(@uiHue,0.70,0.45)", stroke: 1.5 }, font: { ivgfont: "serif", size: 14, gamma:4.5, color:"hsv(@uiHue,0.70,0.45)" } }
+			}
+		@endif
+		}
+	}
+@end
+
+views: {
+	{
+		type: "group"
+		varExpansion: true
+		views: {
+			{
+				type: "group"
+				@window(28, 4, [var]@script.width[/var], [var]@script.height[/var]
+						, "SkinChooser", @backgroundColor, @frameColor, @<
+					[var]@script.contents[/var]
+					{
+						type: "click"
+						mask: "context"
+						action: "popup"
+						params: { items: {
+							{ "Refresh", "@script.rescan" }
+							{ "Open Skins Folder", "launch", "file://[var]@script.folder[/var]" }
+						} }
+					}
+				@>)
+			}
+		}
+	}
+}

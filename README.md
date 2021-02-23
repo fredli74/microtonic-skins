@@ -3,7 +3,13 @@ Microtonic V3.3 Skinning Guide
 
 Microtonic version 3.3.2 supports alternative user interfaces, so-called "skins". A Microtonic skin is a folder on disk containing resource files that replace built-in resources. Resource files are images and color choices for the toolbar at the top of the window. It is not possible to change the positions or dimensions of the controls, only their graphical design.
 
-The template folder contains all factory images for easier skin creation. Do not include factory images in your skin. If any resource file is missing in your skin folder, the built-in resource is used instead. 
+The template folder contains all factory images for easier skin creation. Do not include factory images in your skin. If any resource file is missing in your skin folder, the built-in resource will be used instead. 
+
+Users will use a Microtonic script called SkinChooser to select a skin of their liking. You can find a copy of this script in this repository. You place this script in the `Microtonic Scripts` folder. On Mac, the script folder is located under `/Library/Application Support/`. On Windows, it is located under the Microtonic installation path under `Program Files`. Typically: `C:\Program Files\Sonic Charge\`.
+
+Skins should be placed in a folder called `Microtonic Skins` next to the scripts folder, under the same path as above.
+
+Tip: right-click the SkinChooser window to open a menu where you can refresh the skin choices and easily access the skins folder.
 
 
 Image formats
@@ -94,7 +100,6 @@ Use ISO-8859-1 encoding for strings with C-style escaping.
 Color Scheme File
 -----------------
 colorScheme.makaron contains color definitions for the "toolbar" at the top of the Microtonic window.
-
 ```
 @define TOOLBAR_BUTTON_BACKGROUND_COLOR     = #454545
 @define TOOLBAR_BUTTON_CHECKED_COLOR        = #608290
@@ -106,9 +111,7 @@ colorScheme.makaron contains color definitions for the "toolbar" at the top of t
 @define MORPH_CIRCLE_FILL_COLOR             = #A0D7EF
 @define MORPH_CIRCLE_OUTLINE_COLOR          = #4A7496
 ```
-
 Colors can be expressed in a few different ways:
-
 ```
 #rrggbb        // hex RGB
 #aarrggbb      // hex RGB with "premultiplied" alpha
