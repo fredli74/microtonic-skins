@@ -22,7 +22,7 @@ For animations or multi-state images, we use either frame strips or something we
 
 Frame strips are images where each frame is stacked vertically. For example, a 100x100 pixel button animation with eight frames would be represented by a 100x800 pixel image.
 
-Pixel strips are a proprietary format that can be used on large animations to save space. In a pixel strip, each pixel from each frame is sequenced horizontally. By rearranging pixels this way it is usually possible to achieve a much higher degree of file compression. We have a simple command-line utility to convert between frame strips and pixel strips that can be [downloaded here](https://soniccharge.com/forum/topic/1777).
+Pixel strips are a proprietary format that can be used on large animations to save space. In a pixel strip, each pixel from each frame is sequenced horizontally. By rearranging pixels this way it is usually possible to achieve a much higher degree of file compression. We have a simple command-line utility to convert between frame strips and pixel strips that can be [downloaded here](https://github.com/fredli74/pixelSequencer/releases/latest).
 
 All images in the Template have been converted to frame strips for easier editing.
 
