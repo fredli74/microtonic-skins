@@ -1,7 +1,6 @@
-name: "Factory Template"
-version: "1.0"
-for: "3.3" 
-by: "Fredrik Lidstr\xf6m"
-url: "https://soniccharge.com"
-thumbnail: "Template"
-folder: "TemplateResources"
+name: "Factory Template"        // Visible to end user.
+version: "1.0"                  // - " -
+by: "Fredrik Lidstr\xf6m"       // - " -
+for: "3.3"                      // Made for this Microtonic version.
+url: "https://soniccharge.com"  // Optional (i) url.
+thumbnail: "Template"           // PNG image in full resolution: 1440x1100
