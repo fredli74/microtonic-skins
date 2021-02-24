@@ -92,7 +92,7 @@ version: "1.0"                  // - " -
 by: "Fredrik Lidstr\xf6m"       // - " -
 for: "3.3"                      // Made for this Microtonic version.
 url: "https://soniccharge.com"  // Optional (i) url.
-thumbnail: "Template"           // PNG image in full resolution: 1440x1100
+thumbnail: "Template"           // PNG image in full resolution: 1480x1100
 ```
 Use ISO-8859-1 encoding for strings with C-style escaping.
 
