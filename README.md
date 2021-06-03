@@ -36,24 +36,24 @@ aboutboxoverlay_x2.png                900 x 720
 background_x2.png                    1480 x 1100                 
 beetleknob_x2.png                     100 x 12800    ( 100 x 100 * 128 frames )
 bluetocyansquarebutton_x2.png          88 x 704      (  88 x 88  *   8 frames )
-bluetogreenchannelbutton_x2.png       124 x 448      ( 124 x 56  *   8 frames )
-bluetogreenglasseggs_x2.png           100 x 800      ( 100 x 100 *   8 frames )
-bluetogreensmalllanebutton.png         64 x 320      (  64 x 40  *   8 frames )
+bluetogreenchannelbutton_x2.png       148 x 480      ( 148 x 90  *   8 frames )
+bluetogreenglasseggs_x2.png            96 x 768      (  96 x 96  *   8 frames )
+bluetogreensmalllanebutton_x2.png      64 x 320      (  64 x 40  *   8 frames )
 bluetoredsquarebutton_x2.png           88 x 704      (  88 x 88  *   8 frames )
 buttonicons_x2.png                     48 x 336      (  48 x 48  *   7 frames )
 cclabelbackground_x2.png               68 x 108      (  68 x 36  *   3 frames )
-channelnotes_x2.png                    24 x 256      (  24 x 32  *   8 frames )
-channeltitles_x2.png                   44 x 256      (  44 x 32  *   8 frames )
-displaybuttons_x2.png                  48 x 120      (  48 x 60  *   2 frames )
+channelnotes_x2.png                    64 x 256      (  64 x 32  *   8 frames )
+channeltitles_x2.png                   64 x 256      (  64 x 32  *   8 frames )
+displaybuttons_x2.png                  48 x 128      (  48 x 64  *   2 frames )
 displayfont_x2.png                     32 x 7200     (  32 x 32  * 225 frames )
 horizontalbeetleslider_x2.png         100 x 60                  
 icons_x2.png                           64 x 2112     (  64 x 64  *  33 frames )
 inprintcharacters_x2.png               32 x 7168     (  32 x 32  * 224 frames )
-matrixbackground_x2.png              1132 x 470                  
-matrixchannels_x2.png                  60 x 414                  
-matrixchoke_x2.png                     26 x 26                  
+matrixbackground_x2.png              1120 x 488                  
+matrixchannels_x2.png                  60 x 432                  
+matrixchoke_x2.png                     28 x 28                  
 matrixnotes_x2.png                     56 x 1144     (  56 x 52  *  22 frames )
-matrixplayposition_x2.png              58 x 8                 
+matrixplayposition_x2.png              56 x 8                 
 matrixselection_x2.png               1088 x 50                  
 menubutton_x2.png                      88 x 176      (  88 x 88  *   2 frames )
 mididraghover_x2.png                   68 x 36                  
@@ -62,22 +62,22 @@ midilabelcharacters.png                12 x 240      (  12 x 12  *  20 frames )
 midilabelcharacters_x2.png             24 x 480      (  24 x 24  *  20 frames )
 midinotelabelbackground_x2.png         68 x 108      (  68 x 36  *   3 frames )
 morphleds_x2.png                       24 x 768      (  24 x 24  *  32 frames )
-patchdisplay_x2.png                   304 x 50                  
+patchdisplay_x2.png                   304 x 52                  
 patterntitles_x2.png                   32 x 384      (  32 x 32  *  12 frames )
 patterntitlesgray_x2.png               32 x 384      (  32 x 32  *  12 frames )
-presetdisplay_x2.png                  568 x 50                  
+presetdisplay_x2.png                  568 x 52                  
 programnumbers_x2.png                  20 x 416      (  20 x 32  *  13 frames )
-smallmenubutton_x2.png                 76 x 152      (  76 x 76  *   2 frames )
-tempo_x2.png                          250 x 26                  
+smallmenubutton_x2.png                 80 x 160      (  80 x 80  *   2 frames )
+tempo_x2.png                          256 x 32                  
 verticalbeetleslider_x2.png            60 x 100                  
-whitetobluechannelbutton_x2.png       124 x 448      ( 124 x 56  *   8 frames )
-whitetoblueglasseggs_x2.png           100 x 800      ( 100 x 100 *   8 frames )
+whitetobluechannelbutton_x2.png       148 x 480      ( 148 x 60  *   8 frames )
+whitetoblueglasseggs_x2.png            96 x 768      (  96 x 96  *   8 frames )
 whitetobluelargeroundbutton_x2.png    100 x 800      ( 100 x 100 *   8 frames )
 whitetobluematrixbutton_x2.png         60 x 480      (  60 x 60  *   8 frames )
 whitetoblueroundbutton_x2.png          88 x 704      (  88 x 88  *   8 frames )
 whitetobluesmalllanebutton_x2.png      64 x 320      (  64 x 40  *   8 frames )
 whitetobluesquarebutton_x2.png         88 x 704      (  88 x 88  *   8 frames )
-whitetogreenchannelbutton_x2.png      124 x 448      ( 124 x 56  *   8 frames )
+whitetogreenchannelbutton_x2.png      148 x 480      ( 148 x 60  *   8 frames )
 whitetogreenroundbutton_x2.png         88 x 704      (  88 x 88  *   8 frames )
 whitetogreensquarebutton_x2.png        88 x 704      (  88 x 88  *   8 frames )
 whitetoredmutebutton_x2.png            60 x 480      (  60 x 60  *   8 frames )
