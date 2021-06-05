@@ -19,10 +19,12 @@ if (!this.skinChooser) {
 					var file = files[i];
 					if (file.isDirectory) {
 						traverseDir(path + file.name);
-					} else if (file.name.slice(-7) === ".mtskin") {
-						var info = parseNumbstrict(load(path + file.name));
-						info.dir = path;
-						skins.push(info);
+					} else if (file.name.slice(-7) === ".scskin") {
+						var info = parseNumbstrict(load(path + file.name)).MicrotonicSkin;
+						if (typeof info === "object") {
+							info.dir = path;
+							skins.push(info);
+						}
 					}
 				}
 			}
@@ -60,7 +62,7 @@ if (!this.skinChooser) {
 					+ encode(info.url ? info.url : "") + ", "
 					+ encode(info.dir + info.thumbnail) + ", "
 					+ encode(info.name === "Factory" ? "" : info.dir) + ", "
-					+ (info.for !== "3.3" ? "yes" : "no") + ")\n";
+					+ (info.format != 1 ? "yes" : "no") + ")\n";
 				x += 168;
 				skinChooser.width = Math.max(skinChooser.width, x + 2);
 				++c;

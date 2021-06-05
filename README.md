@@ -85,14 +85,16 @@ whitetoredmutebutton_x2.png            60 x 480      (  60 x 60  *   8 frames )
 
 Skin Config File
 ----------------
-Each skin has a corresponding `.mtskin` config text-file in the following format.
+Each skin has a corresponding `.scskin` config text-file in the following format.
 ```
-name: "Factory Template"        // Visible to end user.
-version: "1.0"                  // - " -
-by: "Fredrik Lidstr\xf6m"       // - " -
-for: "3.3"                      // Made for this Microtonic version.
-url: "https://soniccharge.com"  // Optional (i) url.
-thumbnail: "Template"           // PNG image in full resolution: 1480x1100
+MicrotonicSkin: {
+    format: 1                         // Microtonic skin format.
+    name: "My Awesome Skin"           // Visible to end user.
+    version: "1.0"                    // Visible to end user.
+    by: "Fredrik Lidstr\xf6m"         // Visible to end user.
+    url: "https://soniccharge.com"    // Optional (i) url.
+    thumbnail: "Awesome"              // Name of PNG image (full resolution: 1440x1100)
+}
 ```
 Use ISO-8859-1 encoding for strings with C-style escaping.
 
