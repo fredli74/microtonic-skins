@@ -1,0 +1,8 @@
+MicrotonicSkin: {
+    format: 1                                            // Microtonic skin format.
+    name: "Gin & Tonic"                                     // Visible to end user.
+    version: "1.0"                                       // Visible to end user.
+    by: "Ploki"                    		        // Visible to end user.
+    url: "https://github.com/fredli74/microtonic-skins"  // Optional (i) url.
+    thumbnail: "GinTonic"                                // PNG image in full resolution: 1440x1100
+}
