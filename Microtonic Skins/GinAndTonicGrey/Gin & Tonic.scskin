@@ -1,0 +1,8 @@
+MicrotonicSkin: {
+    format: 1                                            // Microtonic skin format.
+    name: "Gin & Tonic Grey"                                     // Visible to end user.
+    version: "1.0"                                       // Visible to end user.
+    by: "Ploki (and Nikonov Dmitry)"                     // Visible to end user.
+    url: "https://dribbble.com/shots/3628972-Microtonic-redesign/attachments/810320"  // Optional (i) url.
+    thumbnail: "GinTonic"                                // PNG image in full resolution: 1440x1100
+}
