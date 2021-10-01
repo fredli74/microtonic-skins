@@ -1,7 +1,7 @@
 MicrotonicSkin: {
     format: 1
 	name: "tonica"
-	version: "2.2.2"
+	version: "2.2.3"
 	by: "Lars-Erik J"
 	url: "https://l4rs3rik.github.io/"
 	thumbnail: "tonica"
