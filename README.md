@@ -93,7 +93,7 @@ MicrotonicSkin: {
     version: "1.0"                    // Visible to end user.
     by: "Fredrik Lidstr\xf6m"         // Visible to end user.
     url: "https://soniccharge.com"    // Optional (i) url.
-    thumbnail: "Awesome"              // Name of PNG image (full resolution: 1440x1100)
+    thumbnail: "Awesome"              // Name of PNG image (full resolution: 1480x1100)
 }
 ```
 Use ISO-8859-1 encoding for strings with C-style escaping.
