@@ -1,7 +1,7 @@
 Microtonic V3.3 Skinning Guide
 ==============================
 
-Microtonic version 3.3.2 supports alternative user interfaces, so-called "skins". A Microtonic skin is a folder on disk containing resource files that replace built-in resources. Resource files are images and color choices for the toolbar at the top of the window. It is not possible to change the positions or dimensions of the controls, only their graphical design.
+Microtonic version 3.3.3 supports alternative user interfaces, so-called "skins". A Microtonic skin is a folder on disk containing resource files that replace built-in resources. Resource files are images and color choices for the toolbar at the top of the window. It is not possible to change the positions or dimensions of the controls, only their graphical design.
 
 The template folder contains all factory images for easier skin creation. Do not include factory images in your skin. If any resource file is missing in your skin folder, the built-in resource will be used instead. 
 
