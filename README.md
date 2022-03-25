@@ -5,7 +5,7 @@ Microtonic version 3.3.3 supports alternative user interfaces, so-called "skins"
 
 The template folder contains all factory images for easier skin creation. Do not include factory images in your skin. If any resource file is missing in your skin folder, the built-in resource will be used instead. 
 
-Users will use a Microtonic script called SkinChooser to select a skin of their liking. You can find a copy of this script in this repository. You place this script in the `Microtonic Scripts` folder. On Mac, the script folder is located under `/Library/Application Support/`. On Windows, it is located under the Microtonic installation path under `Program Files`. Typically: `C:\Program Files\Sonic Charge\`.
+Users will use a Microtonic script called SkinChooser to select a skin of their liking. The script is included in our offial script package which is available for download at https://soniccharge.com/download.
 
 Skins should be placed in a folder called `Microtonic Skins` next to the scripts folder, under the same path as above.
 
