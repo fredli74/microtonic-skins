@@ -11,6 +11,23 @@ Skins should be placed in a folder called `Microtonic Skins` next to the scripts
 
 Tip: right-click the SkinChooser window to open a menu where you can refresh the skin choices and easily access the skins folder.
 
+Skin Previews
+-------------
+<p align="center">
+  <img src="Microtonic%20Skins/GinAndTonic/GinTonic.png" alt="Gin &amp; Tonic" width="200" />
+  <img src="Microtonic%20Skins/GinAndTonicFlat/GinTonic.png" alt="Gin &amp; Tonic Flat" width="200" />
+  <img src="Microtonic%20Skins/GinAndTonicGrey/GinTonic.png" alt="Gin &amp; Tonic Grey" width="200" />
+  <img src="Microtonic%20Skins/GinAndTonicWave/GinTonic.png" alt="Gin &amp; Tonic Wave" width="200" />
+  <img src="Microtonic%20Skins/Legacy/Legacy.png" alt="Legacy" width="200" />
+  <img src="Microtonic%20Skins/NeuTonic/NeuTonic.png" alt="NeuTonic" width="200" />
+  <img src="Microtonic%20Skins/Silverbox/silverbox.png" alt="Silverbox" width="200" />
+  <img src="Microtonic%20Skins/Silverbox2/silverbox2.png" alt="Silverbox2" width="200" />
+  <img src="Microtonic%20Skins/VintageTonic/VintageTonic.png" alt="Vintage Tonic" width="200" />
+  <img src="Microtonic%20Skins/dark0ne/dark0ne.png" alt="dark0ne" width="200" />
+  <img src="Microtonic%20Skins/factory/factory.png" alt="Factory" width="200" />
+  <img src="Microtonic%20Skins/tonicA/tonicA.png" alt="tonica" width="200" />
+</p>
+
 
 Image formats
 -------------
